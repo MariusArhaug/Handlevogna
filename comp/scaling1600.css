@@ -1,0 +1,541 @@
+@media all and (max-width: 1500px) {
+
+	* {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	html, body {
+		height: 100%;
+	}
+	body {
+		font-family: 'Roboto', sans-serif;
+	}
+
+	#main {
+		transition: margin-left .5s;
+		display: flex;
+		flex-direction: column;
+		background-color: #eeeeee; 
+	}
+	.info-container {
+		min-height: 100%;
+	}
+	.sidenav {
+		height: 100%;
+		width: 0; /* 0 width , change this with JavaScropt */
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #111;
+		overflow-x: hidden;
+		padding-top: 60px;
+		transition: 0.5s; /*5 second transition effect to slide in sidenav*/ 
+	}
+/*The navigation menu links */ 
+	.sidenav a,h3 {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: #818181;
+		display: block;
+		transition: 0.3;
+	}
+
+
+	.sidenav a:hover {
+		color: #f1f1f1;
+	}
+
+/*Position and style the close button (top right corner */
+
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+	.header-container {
+		order: 1;
+		width: 100%;
+		height: 70px;
+		display: flex;
+		justify-content: space-between;
+		background-color: white;
+		border: solid 2px gray;
+		padding-top: 5px;
+		padding-bottom: 10px;
+
+	}
+	.home-btn {
+		flex-basis: 33%;
+		box-sizing: border-box;
+		padding: 5px;
+		padding-left: 15px;
+		order: 1;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 12.5px;
+		margin-top: 8px;
+
+	}
+
+	.home-btn a {
+		text-decoration: none;
+		color: black;
+		order: 2,;
+	}
+
+	.home-btn img {
+		width: 25px;
+		height: 25px;
+		order: 1;
+		margin-right: 5px;
+	}
+	.gif {
+		order: 3;
+		margin-left: 20px;
+
+	}
+
+	.gif img {
+		width: 35px;
+		height: 35px;
+	}
+	.topnav {
+		flex-basis: 33%;
+		order: 2;
+		width: 100%;
+		margin-top: -5px;
+		display: flex;
+		margin-right: 20px;
+
+
+	}
+	.topnav input {
+		width: 200px;
+		font-size: 20px;
+
+	}
+	/*Forandre boksen til search enginen og knappen*/
+
+
+	
+	.topnav input[type=text]:focus {
+		width: 250px;
+	}
+	
+
+	.login {
+		order: 3;
+		flex-basis: 10%;
+		height: 100%;
+		box-sizing: border-box;
+		display: flex;
+		width: 100%;
+		margin-top: 7.5px;
+
+		
+	}
+	.login img {
+		order: 1;
+		margin-top: 10px;
+		width: 25px;
+		height: 25px;
+		
+	}
+	.login h3 {
+		order: 2;
+		font-size: 15px;
+		padding-left: 10px;
+		color: black;
+		margin-top: 5px;
+		margin-bottom: 10px;
+		
+	}
+	.dropdown {
+		position: relative;
+	    display: flex;
+	}
+	.dropdown-content {
+		align-items: center;
+		display: none;
+	    position: absolute;
+	    margin-top: 70px;
+	    background-color: #f9f9f9;
+	    border: solid 1px gray;
+	    width: 125px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    padding: 12px 16px;
+	    z-index: 1;
+	    padding: 10px;
+	    padding-top: 20px;
+	    height: 80px;
+	}
+	.dropdown-content>a {
+		padding: 10px;
+		padding-left: 15px;
+		background-color: gray;
+		color: white;
+		font-size:20px;
+		text-decoration: none;
+		margin-bottom: 10px;
+	}
+	.dropdown:hover .dropdown-content {
+		display: block;
+
+	}
+	.handlekurv {
+		order: 4;
+		flex-basis: 13%;
+		box-sizing: border-box;
+		display: flex;
+		height: 100%;
+		width: 100%;
+		
+	}
+
+	.handlekurv img {
+		order: 1;
+		width: 30px;
+		height: 30px;
+		margin-left: 40px;
+		margin-top: 8px,;
+	}
+
+	.handlekurv h3 {
+		order: 2;
+		font-size: 15px;
+		padding-left: 6px;
+		color: black;
+		margin-top: 15px;
+		
+	}
+	/*Headeren slutter her, nå begynner selve bodyen*/
+	.main-container {
+		order: 2;
+		display: flex;
+		width: 100%;
+		margin: 0px auto 0 auto; 
+		justify-content: space-between;
+		border: solid 2px grey;
+		padding-bottom: 200px;
+		
+		
+	}
+	.main-info {
+		width: 90%;
+		display: flex;
+		margin-right: auto;
+		margin-left: auto;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.instructions {
+		order: 1;
+		flex-basis: 35%;
+		box-sizing: border-box;
+		height: 300px;
+		margin-left: 30px;
+	}
+	.info-instructions {
+		width: 344px;
+		margin-top: 30px;
+		border: solid 2px gray;
+		margin-left: -3px;
+		background-color: #424242;
+		color: white;
+		height: 400px;
+		padding: 20px;
+		-webkit-box-shadow: 0px 0px 50px -5px rgba(69,69,69,1);
+
+	}
+	.info-instructions h1 {
+		font-size: 15px;
+		box-sizing: border-box;
+		width: 200px;
+	}
+
+	.info-instructions p {
+		padding-top: 20px;
+		font-size: 10px;
+		box-sizing: border-box;
+		width: 200px;
+		
+	}
+
+	.login-tab {
+		order: 2;
+		flex-basis: 35%;
+		width: 200px;
+		height: 300px;
+
+
+	}
+	.login-tab #passord {
+		width: 210px;
+	}
+	.main-info .login-container {
+		width: 306px;
+		margin-left: -107px;
+	
+		margin-top: 30px
+		padding: 20px;
+		padding-left: 0;
+		height: 400px;
+		padding-top: 15px;
+		margin-bottom: 245px;
+
+	}  
+
+	.main-info .login-container form {
+		margin-left: 20px;
+	}
+	.main-info .login-container h1 {
+		font-size: 15px;
+		margin-left: 20px;
+		margin-bottom: 10px;
+
+	}
+	.main-info .login-container h3 {
+		font-size: 10px;
+		color: black;
+
+	}
+
+	.main-info .login-container a {
+		margin-top: 5px;
+		font-size: 10px;
+		color: black;
+		padding-left: 0;
+	}
+
+	.main-info .login-container h2  {
+		font-size: 12px;
+
+	}
+	.main-info .login-container a {
+		font-size: 12px;
+	}
+	.main-info .login-container input [type=text] {
+		padding: 6px;
+		margin-top: 8px;
+		border: none;
+		-webkit-transition: width 0.7s ease-in-out;
+		outline: none;
+	  	box-shadow: -8px 10px 0px -7px #4EA6EA, 8px 10px 0px -7px #4EA6EA;
+	}
+
+
+	.main-info #brukernavn, #passord, #email {
+		border: solid 2px gray;
+		border-radius: 4px;
+		width: 80%;
+		height: 30px;
+		font-size: 20px;
+	}
+	.main-info #passord {
+		font: small-caption;
+		
+	}
+	.main-info .annen-info-signup {
+		border: solid 2px gray;
+		border-radius: 4px;
+		width: 60%;
+	}
+	.main-info .logginn_knapp {
+		width: 150px;
+		height: 30px;
+		color: white;
+		background-color: #424242;
+		border: solid 1px gray;
+		font-size: 15px;
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
+	.tutorial-container {
+		order: 3;
+		width: 749px;
+	    background-color: #424242;
+	    color: white;
+	    height: 300px;
+	    margin-top: 130px;
+	    margin-left: 80px;
+	    margin-right: 168px;
+	    border: solid 2px gray;
+		margin-bottom: 10px;
+
+	  	-webkit-box-shadow: 0px 0px 50px -5px rgba(69,69,69,1);
+		}
+	.tutorial {
+		width: 400px;
+		border: none;
+		background-color: #424242;
+	}	
+
+	.tutorial video {
+			display: none;
+		}
+	.tutorial a {
+		display: inline-block;
+		color: white;
+		width: 200px;
+		height: 40px;
+		font-size: 15px;
+		margin-left: 0;
+	}
+	
+	.sidebar1 {
+		order: 1;
+		flex-basis: 15%;
+		box-sizing: border-box;
+	}
+	.sidebar1 span {
+		padding: 5px;
+		padding-left: 20px;
+		font-size: 20px;
+	}
+	.main-column {
+		order: 2;
+		flex-basis: 70%;
+		box-sizing: border-box;
+		padding: 5px;
+		padding-left: 10px;
+
+	}
+	.meny-container {
+		margin-left: 100px;
+	}
+	.sidebar2 {
+		order: 3;
+		flex-basis: 15%;
+		box-sizing: border-box;
+		padding: 5px;
+		background-color: white;
+		-webkit-box-shadow: 0px 0px 50px -5px rgba(69,69,69,1);
+	}
+	.pagination {
+		display: none;
+	}
+	.info-lover {
+		margin-top: -200px;
+		height: 200px;
+		background-color: white;
+		color: black;
+		width: 100%;
+		position: relative;
+		clear: both;
+		margin-bottom: 200px;
+		padding: 20px;
+		align-items: center;
+		display: flex;
+		border: solid 1px gray;
+		font-size: 12.5px; 
+
+	}
+	.lover-bilde {
+		order: 1;
+		margin-top: -7px;
+		flex-basis: 25%;
+		box-sizing: border-box
+	}
+	.info-lover img {
+		width: 65px;
+		height: 65px;
+		margin-left: 700px;
+	}
+	.info-text {
+		order: 2;
+		flex-basis: 75%;
+
+	}
+	.info-lover p {
+		width: 400px;
+		margin: 20px;
+		box-sizing: border-box;
+		margin-right: 200px;
+	}
+
+	.info-lover-container  {
+			margin-left: -300px;
+			display: inherit;
+	}
+	.info-bokser {
+		color: gray;
+		background-color: black;
+		display: flex;
+		width: 100%;
+		height: 200px;
+		position: relative;
+		margin-top: -200px;
+		clear: both;
+		font-size: 12.5px;
+
+	}
+
+	#info_boks1 {
+		flex-basis: 33%;
+		box-sizing: border-box;
+		padding: 35px;
+		border: solid 1px black;
+		margin-top: 10px;
+	}
+
+	#info_boks2 {
+		padding: 35px;
+		flex-basis: 33%;
+		box-sizing: border-box;
+		padding-right: 50px;
+		margin-left: 110px;
+
+	}
+	#info_boks2 a img {
+		width: 65px;
+		height: 65px;
+		justify-content: space-between;
+	}
+	#info-boks3 {
+		flex-basis: 33%;
+		box-sizing: border-box;
+		color: gray;
+		
+	}
+	#info_boks3 table {
+		font-size: 12.5px;
+		margin-left: 90px;
+	}
+	
+	.header-img {
+	flex-basis: 30%;
+	margin-right: 10px;
+	margin-top: 10px;
+	}
+	.header-img img {
+		width: 30px;
+		height: 30px;
+	}
+
+	.fixed-size-products, .fixed-size {
+		width: 175px;
+
+	}
+	.fixed-size-products input {
+		width: 150px;
+	}
+	#leggtil {
+		margin-left: 60px;
+	}
+	.fixed-size-products img {
+		width: 140px;
+		height: 140px;
+		margin-left: 15px;
+	}
+	.fixed-size img {
+		width: 140px;
+		height: 140px;
+		margin-left: 15px;
+	}
+}
